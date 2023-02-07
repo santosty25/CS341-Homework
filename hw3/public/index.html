@@ -1,0 +1,92 @@
+<!--Tyler Santos-->
+<!--This html file creates a basic website to order cheesecake-->
+<!--2/1/23-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="stylesheets/santosty25.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--Edits what happens to the order form section of the page-->
+    <script src="javascripts/stuff.js"></script>
+</head>
+<body>
+    <h1>Cheesecake Order Form</h1><br>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg/800px-Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg?20171018065901" 
+    alt="cheesecake" width="175" height="175">
+
+    <p>Quantity Topping</p>
+    <!--Table that contains radio buttons and dropdown-->
+    <table style="border: 0px solid transparent; border-spacing: 10px;" id="toppings">
+        <tr>
+            <td><!--Empty Cell--></td>
+            <td>
+                <input type="radio" id="topping1" name="topAnswer">
+                <label for="topping1" id="plain">Plain</label><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <select name="quantity" id="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </td>
+            <td>
+                <input type="radio" id="topping2" name="topAnswer">
+                <label for="topping2" id="cherry">Cherry</label><br>
+            </td>
+        </tr>
+        <tr>
+            <td><!--Empty Cell--></td>
+            <td> 
+                <input type="radio" id="topping3" name="topAnswer">
+                <label for="topping3" id="chocolate">Chocolate</label><br>
+            </td>
+        </tr>
+    </table>
+
+    <!--Text area for to input any instructions-->
+    <form>
+        <p>Notes:</p>
+        <textarea id="notes" name="notes" rows="5" 
+        cols="50"> Enter any special instructions here.
+        </textarea><br>
+        <input type="submit" value="Order" id="order">
+    </form>
+
+    <!--List of the orders in a specific month-->
+    <!--This code for the drop down menu was taken from w3schools-->
+    <!--Link: https://www.w3schools.com/howto/howto_css_dropdown.asp-->
+
+    <!--onclick functionaility was taken from stackoverflow-->
+    <!--https://stackoverflow.com/questions/55832746/how-to-set-dropdown-button-text-based-on-selected-option-->
+    <h3>Total Orders</h3>
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn" id="monthButton">Jan</button>
+            <div class="dropdown-content" id="month">
+                <a class="option" href="#" value="Jan" onclick="changeButtonText(this.innerText)">Jan</a>
+                <a class="option" href="#" value="Feb" onclick="changeButtonText(this.innerText)">Feb</a>
+                <a class="option" href="#" value="Mar" onclick="changeButtonText(this.innerText)">Mar</a>
+                <a class="option" href="#" value="Apr" onclick="changeButtonText(this.innerText)">Apr</a>
+                <a class="option" href="#" value="May" onclick="changeButtonText(this.innerText)">May</a>
+                <a class="option" href="#" value="Jun" onclick="changeButtonText(this.innerText)">Jun</a>
+                <a class="option" href="#" value="Jul" onclick="changeButtonText(this.innerText)">Jul</a>
+                <a class="option" href="#" value="Aug" onclick="changeButtonText(this.innerText)">Aug</a>
+                <a class="option" href="#" value="Sep" onclick="changeButtonText(this.innerText)">Sep</a>
+                <a class="option" href="#" value="Oct" onclick="changeButtonText(this.innerText)">Oct</a>
+                <a class="option" href="#" value="Nov" onclick="changeButtonText(this.innerText)">Nov</a>
+                <a class="option" href="#" value="Dec" onclick="changeButtonText(this.innerText)">Dec</a>
+            </div>
+    </div>
+
+    <ul>
+        <li>11 cherry</li>
+        <li>17 chocolate</li>
+        <li>31 plain</li>
+    </ul>
+
+</body>
+</html>

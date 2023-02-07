@@ -1,0 +1,102 @@
+/*Tyler Santos*/
+/*This CSS file makes design changes to the elements of the cheese
+cake website */
+/*2/1/23*/
+
+/* Applies to the entire body of the HTML document */
+body {
+  /*Adds background image*/
+  margin: 0;
+  height: 100%;
+  background-image: url("https://as2.ftcdn.net/v2/jpg/01/25/63/91/1000_F_125639123_e7fMd3m1zuCb7CwSmdlDd9ggZchLmpOH.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: arial, sans-serif;
+  color: #0096FF;g
+}
+
+/*Applies to any <img> elements to add a border to the image*/
+img {
+  border: 10px solid transparent;
+  padding-left: 15px;
+  border-image: url("https://cdn.pixabay.com/photo/2020/02/06/01/52/frame-4822807__480.png") 30 round;
+}
+
+/*Applies to <textarea> elements*/
+textarea {
+  /*Change font and color*/
+  font-family: verdana, sans-serif;
+  color: #0096FF;
+}
+
+/* Applies to all <h1>...</h1> elements.*/
+h1 {
+  /*Change font and color*/
+  font-family: garamond, serif
+  margin-top: 5px;
+  color: #ffffff;
+}
+
+/* Applies to all <h3>...</h3> elements.*/
+h3 {
+  /*Change font and color*/
+  font-family: georgia, serif
+  margin-top: 5px;
+  display: inline-block;
+  color: #ffffff;
+}
+
+/* Applies to all <ul> elements.*/
+ul {
+  /*Change font and color*/
+  font-family: georgia, serif
+  margin-top: 5px;
+  color: #ffffff;
+}
+
+/* This code was copied from w3schols
+   Link: https://www.w3schools.com/howto/howto_css_dropdown.asp
+/* Dropdown Button */
+.dropbtn {
+  background-color: #d184f0;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  max-height:200px;
+  overflow:scroll; 
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
