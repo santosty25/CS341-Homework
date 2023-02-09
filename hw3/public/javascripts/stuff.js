@@ -1,5 +1,7 @@
 
-
+//Tyler Santos
+//Javascript file for Cheesecake HTML
+//2/8/23
 $(document).ready(function() {
 
     //This case edits the page when the order has been placed
@@ -11,24 +13,21 @@ $(document).ready(function() {
             //alert the user that the cheesecake isn't vegan
             alert("The cheesecakes include dairy.");
         } else {
-            var plain = $("#topping1").val();
-            var cherry = $("#topping2").val();
-            var chocolate = $("#topping3").val();
             var quantity = $("#quantity").val();
             var topping;
 
             //Check which topping was selected
-            if(plain) {
+            if( $('#topping1').is(':checked') ) {
                 topping = "Plain";
-            } else if(cherry) {
+            } else if( $('#topping2').is(':checked') ) {
                 topping = "Cherry";
-            } else if(chocolate) {
+            } else if( $('#topping3').is(':checked') ) {
                 topping = "Chocolate";
             }
 
             //remove order form and print text repeating order
             $("#toppings").remove();
-            $("#order").replaceWith("<p>Thank you! Your order has been placed. Your order was" + quantity + " " 
+            $("#order").replaceWith("<p>Thank you! Your order has been placed. Your order was " + quantity + " " 
                 + topping + ". Notes: " + notes +"</p>");
         }
     });
